@@ -1,5 +1,5 @@
-# Usa la imagen oficial de Go 1.21.6
-FROM golang:1.21.6
+# Usa la imagen oficial de Go 1.23.3
+FROM golang:1.23.3
 
 # Establece el directorio de trabajo en /app
 WORKDIR /app
@@ -11,14 +11,11 @@ RUN go mod download
 # Copia el resto de los archivos de la aplicación
 COPY . .
 
-# Copia el archivo .env al contenedor
-COPY .env .env
-
 # Expone el puerto 8080
 EXPOSE 8080
 
 # Compila la aplicación
-RUN go build -o stori-app
+RUN go build -o stori-transactions
 
 # Ejecuta la aplicación al iniciar el contenedor
-CMD ["./stori-app"]
+CMD ["./stori-transactions"]
