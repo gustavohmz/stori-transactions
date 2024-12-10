@@ -1,0 +1,5 @@
+ID,Amount,Type,Date,AccountID
+1,100.50,credit,2024-08-09,account-123
+2,-50.25,debit,2024-11-09,account-123
+3,200.00,credit,2024-09-09,account-456
+4,-75.00,debit,2024-11-09,account-456
