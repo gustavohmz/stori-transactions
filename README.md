@@ -16,7 +16,19 @@ The Stori Transactions API is a solution designed to process CSV files containin
 
 ## Requirements
 - Docker installed on your machine to run the API in a containerized environment.
-- AWS CLI configured with your credentials to interact with S3.
+- AWS CLI installed and configured on your machine.
+    - Install AWS CLI.
+    - Configure the credentials for AWS CLI using the following command:
+    ```bash
+    aws configure
+    ```
+    Enter the values for the following prompts:
+
+    - AWS Access Key ID: `<your-aws-access-key-id>` (from the `.env` file)
+    - AWS Secret Access Key: `<your-aws-secret-access-key>` (from the `.env` file)
+    - Default region: `<your-aws-region>` (from the `.env` file, e.g., `us-east-1`)
+    - Default output format: `json`
+- Note: AWS CLI is required to upload the CSV file to the S3 bucket as part of the API workflow.
 - Access to:
     - An S3 bucket for storing the CSV file.
     - A DynamoDB table named Transactions.
