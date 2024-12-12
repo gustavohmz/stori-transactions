@@ -11,6 +11,9 @@ RUN go mod download
 # Copia el resto de los archivos de la aplicación
 COPY . .
 
+# Copia el archivo .env
+COPY .env .env
+
 # Expone el puerto 8080
 EXPOSE 8080
 
